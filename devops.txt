@@ -1,0 +1,388 @@
+Microsoft Windows [Version 10.0.22631.4037]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\gchai>git init
+Reinitialized existing Git repository in C:/Users/gchai/.git/
+
+C:\Users\gchai>git status
+warning: could not open directory 'Application Data/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Documents/My Music/': Permission denied
+warning: could not open directory 'Documents/My Pictures/': Permission denied
+warning: could not open directory 'Documents/My Videos/': Permission denied
+warning: could not open directory 'Local Settings/': Permission denied
+warning: could not open directory 'My Documents/': Permission denied
+warning: could not open directory 'NetHood/': Permission denied
+warning: could not open directory 'PrintHood/': Permission denied
+warning: could not open directory 'Recent/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+warning: could not open directory 'Start Menu/': Permission denied
+warning: could not open directory 'Templates/': Permission denied
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .anaconda/
+        .cache/
+        .conda/
+        .condarc
+        .continuum/
+        .eclipse/
+        .idea/
+        .ipynb_checkpoints/
+        .ipython/
+        .jupyter/
+        .m2/
+        .matplotlib/
+        .p2/
+        .vscode/
+        01-A-REGRESSION1-BMI.ipynb
+        01-BREGRESSION02.ipynb
+        01REGRESSION-HEALTHINSURANCE.ipynb
+        99-BSCALING.ipynb
+        99-CMISSING VALUES CLAIMS DATA.ipynb
+        AppData/
+        Contacts/
+        DECEMBER_18.ipynb
+        DECISION_TREE.ipynb
+        Downloads/
+        Favorites/
+        IdeaProjects/
+        IntelGraphicsProfiles/
+        KNN_CLASSIFICATION_ALGORITHM.ipynb
+        Links/
+        Log_ROC.png
+        Logistic regression.ipynb
+        Microsoft/
+        Music/
+        NLP _NOTES 1.ipynb
+        NLP_2notes.ipynb
+        NTUSER.DAT
+        NTUSER.DAT{cec4bf20-d4da-11ed-99f8-a02942c14eb2}.TM.blf
+        NTUSER.DAT{cec4bf20-d4da-11ed-99f8-a02942c14eb2}.TMContainer00000000000000000001.regtrans-ms
+        NTUSER.DAT{cec4bf20-d4da-11ed-99f8-a02942c14eb2}.TMContainer00000000000000000002.regtrans-ms
+        New folder/
+        OneDrive/
+        Practice_Health_Care_dataset.ipynb
+        RANDOMFORESTTREE.ipynb
+        Saved Games/
+        Searches/
+        Untitled.ipynb
+        Untitled1.ipynb
+        Untitled2.ipynb
+        Untitled3.ipynb
+        Untitled4.ipynb
+        Untitled5.ipynb
+        Untitled6.ipynb
+        Untitled7.ipynb
+        Videos/
+        anaconda3/
+        co2_emission.ipynb
+        concrete.ipynb
+        devops/
+        eclipse-workspace/
+        eclipse/
+        java
+        javac
+        my_project/
+        ntuser.dat.LOG1
+        ntuser.dat.LOG2
+        ntuser.ini
+        source/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\gchai>git add <new_file>
+The syntax of the command is incorrect.
+
+C:\Users\gchai>touch example.txt
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\gchai>echo. >example.txt
+
+C:\Users\gchai>git add example.txt
+
+C:\Users\gchai>git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+C:\Users\gchai>git commit -m "your commit message"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'gchai@shiva_sai.(none)')
+
+C:\Users\gchai>git config --global user.email "gchaitanya023@gmail.com"
+
+C:\Users\gchai>git config --global user.name "Chaitanya"
+
+C:\Users\gchai>git commit -m "your commit message"
+[master (root-commit) cf9ef82] your commit message
+ 1 file changed, 1 insertion(+)
+ create mode 100644 example.txt
+
+C:\Users\gchai>git clone https://github.com/exampleuser/my-project.git
+Cloning into 'my-project'...
+info: please complete authentication in your browser...
+remote: Repository not found.
+fatal: repository 'https://github.com/exampleuser/my-project.git/' not found
+
+C:\Users\gchai>https://github.com/chaitanya-5f5/House_blue_printhttps://github.com/chaitanya-5f5/House_blue_print^Ahttps://github.com/chaitanya-5f5/House_blue_print^A
+'https:' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\gchai>git clone https://github.com/chaitanys-5f5/devops_my.git
+Cloning into 'devops_my'...
+info: please complete authentication in your browser...
+remote: Repository not found.
+fatal: repository 'https://github.com/chaitanys-5f5/devops_my.git/' not found
+
+C:\Users\gchai>git clone https://github.com/chaitanya-5f5/devops_new.git
+Cloning into 'devops_new'...
+info: please complete authentication in your browser...
+
+C:\Users\gchai>git config --global user.name "chaitanya-5f5"
+
+C:\Users\gchai>git config --global user.email "22wh1a05f5@bvrithyderabad.edu.in"
+
+C:\Users\gchai>git commit -m "message"
+warning: could not open directory 'Application Data/': Permission denied
+warning: could not open directory 'Cookies/': Permission denied
+warning: could not open directory 'Documents/My Music/': Permission denied
+warning: could not open directory 'Documents/My Pictures/': Permission denied
+warning: could not open directory 'Documents/My Videos/': Permission denied
+warning: could not open directory 'Local Settings/': Permission denied
+warning: could not open directory 'My Documents/': Permission denied
+warning: could not open directory 'NetHood/': Permission denied
+warning: could not open directory 'PrintHood/': Permission denied
+warning: could not open directory 'Recent/': Permission denied
+warning: could not open directory 'SendTo/': Permission denied
+warning: could not open directory 'Start Menu/': Permission denied
+warning: could not open directory 'Templates/': Permission denied
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .anaconda/
+        .cache/
+        .conda/
+        .condarc
+        .continuum/
+        .eclipse/
+        .gitconfig
+        .idea/
+        .ipynb_checkpoints/
+        .ipython/
+        .jupyter/
+        .m2/
+        .matplotlib/
+        .p2/
+        .vscode/
+        01-A-REGRESSION1-BMI.ipynb
+        01-BREGRESSION02.ipynb
+        01REGRESSION-HEALTHINSURANCE.ipynb
+        99-BSCALING.ipynb
+        99-CMISSING VALUES CLAIMS DATA.ipynb
+        AppData/
+        Contacts/
+        DECEMBER_18.ipynb
+        DECISION_TREE.ipynb
+        Downloads/
+        Favorites/
+        IdeaProjects/
+        IntelGraphicsProfiles/
+        KNN_CLASSIFICATION_ALGORITHM.ipynb
+        Links/
+        Log_ROC.png
+        Logistic regression.ipynb
+        Microsoft/
+        Music/
+        NLP _NOTES 1.ipynb
+        NLP_2notes.ipynb
+        NTUSER.DAT
+        NTUSER.DAT{cec4bf20-d4da-11ed-99f8-a02942c14eb2}.TM.blf
+        NTUSER.DAT{cec4bf20-d4da-11ed-99f8-a02942c14eb2}.TMContainer00000000000000000001.regtrans-ms
+        NTUSER.DAT{cec4bf20-d4da-11ed-99f8-a02942c14eb2}.TMContainer00000000000000000002.regtrans-ms
+        New folder/
+        OneDrive/
+        Practice_Health_Care_dataset.ipynb
+        RANDOMFORESTTREE.ipynb
+        Saved Games/
+        Searches/
+        Untitled.ipynb
+        Untitled1.ipynb
+        Untitled2.ipynb
+        Untitled3.ipynb
+        Untitled4.ipynb
+        Untitled5.ipynb
+        Untitled6.ipynb
+        Untitled7.ipynb
+        Videos/
+        anaconda3/
+        co2_emission.ipynb
+        concrete.ipynb
+        devops/
+        eclipse-workspace/
+        eclipse/
+        java
+        javac
+        my_project/
+        ntuser.dat.LOG1
+        ntuser.dat.LOG2
+        ntuser.ini
+        source/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\gchai>
+C:\Users\gchai>C:\Users\gchai>git clone https://github.com/chaitanya-5f5/devops_new.git
+'C:\Users\gchai' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\gchai>
+C:\Users\gchai>C:\Users\gchai>git clone https://github.com/chaitanya-5f5/devops_new.gi^Z^Z^Z
+C:\Users\gchai>
+C:\Users\gchai>git clone https://github.com/chaitanya-5f5/devops_new.git
+Cloning into 'devops_new'...
+info: please complete authentication in your browser...
+remote: Repository not found.
+fatal: repository 'https://github.com/chaitanya-5f5/devops_new.git/' not found
+
+C:\Users\gchai>
+C:\Users\gchai>git clone https://github.com/chaitanya-5f5/javaprogramm.git
+Cloning into 'javaprogramm'...
+warning: You appear to have cloned an empty repository.
+
+C:\Users\gchai>git clone https://github.com/chaitanya-5f5/house_blue_print.g
+it
+Cloning into 'house_blue_print'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+C:\Users\gchai>git push origin <my_branch>
+The syntax of the command is incorrect.
+
+C:\Users\gchai>git push origin branch-name
+error: src refspec branch-name does not match any
+error: failed to push some refs to 'origin'
+
+C:\Users\gchai>git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+
+C:\Users\gchai>git branch
+* master
+
+C:\Users\gchai>git branch -M main
+
+C:\Users\gchai>git push -u origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\Users\gchai>git remote add origin https://github.com/chaitanya-5f5/devops_new.git
+
+C:\Users\gchai>git remote -v
+origin  https://github.com/chaitanya-5f5/devops_new.git (fetch)
+origin  https://github.com/chaitanya-5f5/devops_new.git (push)
+
+C:\Users\gchai>git push -u origin main
+info: please complete authentication in your browser...
+remote: Repository not found.
+fatal: repository 'https://github.com/chaitanya-5f5/devops_new.git/' not found
+
+C:\Users\gchai>git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/chaitanya-5f5/devops_new.git'
+
+C:\Users\gchai>git remote add origin https://github.com/chaitanya-5f5/house_blue_print.git
+error: remote origin already exists.
+
+C:\Users\gchai>git remote -v
+origin  https://github.com/chaitanya-5f5/devops_new.git (fetch)
+origin  https://github.com/chaitanya-5f5/devops_new.git (push)
+
+C:\Users\gchai>git remote set-url origin https://github.com/chaitanya-5f5/devops_new.git
+
+C:\Users\gchai>git remote set-url origin https://github.com/chaitanya-5f5/devops_new.git
+
+C:\Users\gchai>git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/chaitanya-5f5/devops_new.git'
+
+C:\Users\gchai>git remote remove origin
+
+C:\Users\gchai>git remote add origin https://github.com/chaitanya-5f5/devops_new.git
+
+C:\Users\gchai>git branch my_branch
+
+C:\Users\gchai>git branch
+* main
+  my_branch
+
+C:\Users\gchai>git pull origin my_branch
+info: please complete authentication in your browser...
+remote: Repository not found.
+fatal: repository 'https://github.com/chaitanya-5f5/devops_new.git/' not found
+
+C:\Users\gchai>git checkout -- file
+error: pathspec 'file' did not match any file(s) known to git
+
+C:\Users\gchai>git checkout -- example.txt
+
+C:\Users\gchai>git reset example.txt
+
+C:\Users\gchai>git reset --soft HEAD~1
+fatal: ambiguous argument 'HEAD~1': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+C:\Users\gchai>git reset --hard HEAD~1
+fatal: ambiguous argument 'HEAD~1': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+C:\Users\gchai>git log
+commit cf9ef82d8cb852d6835ee60ab419f517a53df732 (HEAD -> main, my_branch)
+Author: Chaitanya <gchaitanya023@gmail.com>
+Date:   Sat Sep 21 11:12:12 2024 +0530
+
+    your commit message
+
+C:\Users\gchai>git diff <commit>
+The syntax of the command is incorrect.
+
+C:\Users\gchai>git diff commit
+fatal: ambiguous argument 'commit': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+C:\Users\gchai>git checkout abc123 -- example.txt
+fatal: invalid reference: abc123
+
+C:\Users\gchai>git checkout my_branch
+Switched to branch 'my_branch'
+
+C:\Users\gchai>git checkout -- example.txt
+
+C:\Users\gchai>^A
+
+
