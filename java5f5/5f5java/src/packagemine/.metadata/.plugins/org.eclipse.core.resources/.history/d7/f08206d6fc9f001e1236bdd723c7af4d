@@ -1,0 +1,31 @@
+package newproject;
+import java.util.*;
+public class Practise {
+		
+	public static void main(String[] args) {
+		// Create a Scanner object to read input from the console
+        //Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user for name
+        //System.out.print("Enter your name: ");
+        //String name = scanner.nextLine();
+
+        // Prompt the user for age
+        //System.out.print("Enter your age: ");
+        //int age = scanner.nextInt();
+
+        // Display the entered name and age
+        //System.out.println("You entered the following information:");
+        //System.out.println("Name: " + name);
+        //System.out.println("Age: " + age);
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the nam eof the person:");
+		String name=sc.nextLine();
+		System.out.println("Enter the age of the person:");
+		int age=sc.nextInt();
+		System.out.println(name);
+		System.out.println(age);
+
+	}
+
+}

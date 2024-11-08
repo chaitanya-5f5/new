@@ -1,0 +1,12 @@
+package newproject;
+import java.util.*;
+public class Practise {
+		public Practise{
+			int x=10;
+			int y=20;
+		}
+	public static void main(String[] args) {
+		Practise obj1=new Practise();
+		System.out.println(obj1.x);
+}
+}

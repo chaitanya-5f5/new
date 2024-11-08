@@ -1,0 +1,73 @@
+# Build the Regression / Regressor models
+
+from sklearn.linear_model import LinearRegression
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import ExtraTreesRegressor
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.svm import SVR
+
+# Create objects of Regression / Regressor models with default hyper-parameters
+
+ModelMLR = LinearRegression()
+ModelDCR = DecisionTreeRegressor()
+ModelRFR = RandomForestRegressor()
+ModelETR = ExtraTreesRegressor()
+ModelKNN = KNeighborsRegressor(n_neighbors=5)
+ModelSVR = SVR()
+
+# Evalution matrix for all the algorithms
+ 
+MM = [ModelMLR, ModelDCR, ModelRFR, ModelETR, ModelKNN, ModelSVR]
+
+for models in MM:
+    
+    # Fit the model with train data
+    
+    models.fit(x_train, y_train)
+    
+    # Predict the model with test data
+
+    y_pred = models.predict(x_test)
+    
+    # Print the model name
+    
+    print('Model Name: ', models)
+    
+    # Evaluation metrics for Regression analysis
+
+    from sklearn import metrics
+
+    print('Mean Absolute Error (MAE):', round(metrics.mean_absolute_error(y_test, y_pred),3))  
+    print('Mean Squared Error (MSE):', round(metrics.mean_squared_error(y_test, y_pred),3))  
+    print('Root Mean Squared Error (RMSE):', round(np.sqrt(metrics.mean_squared_error(y_test, y_pred)),3))
+    print('R2_score:', round(metrics.r2_score(y_test, y_pred),6))
+    print('Root Mean Squared Log Error (RMSLE):', round(np.log(np.sqrt(metrics.mean_squared_error(y_test, y_pred))),3))
+    
+    # Define the function to calculate the MAPE - Mean Absolute Percentage Error
+
+    def MAPE (y_test, y_pred):
+        y_test, y_pred = np.array(y_test), np.array(y_pred)
+        return np.mean(np.abs((y_test - y_pred) / y_test)) * 100
+    
+    # Evaluation of MAPE 
+
+    result = MAPE(y_test, y_pred)
+    print('Mean Absolute Percentage Error (MAPE):', round(result, 2), '%')
+    
+    # Calculate Adjusted R squared values 
+
+    r_squared = round(metrics.r2_score(y_test, y_pred),6)
+    adjusted_r_squared = round(1 - (1-r_squared)*(len(y)-1)/(len(y)-x.shape[1]-1),6)
+    print('Adj R Square: ', adjusted_r_squared)
+    print('------------------------------------------------------------------------------------------------------------')
+    #-------------------------------------------------------------------------------------------
+    new_row = {'Model Name' : models,
+               'Mean_Absolute_Error_MAE' : metrics.mean_absolute_error(y_test, y_pred),
+               'Adj_R_Square' : adjusted_r_squared,
+               'Root_Mean_Squared_Error_RMSE' : np.sqrt(metrics.mean_squared_error(y_test, y_pred)),
+               'Mean_Absolute_Percentage_Error_MAPE' : result,
+               'Mean_Squared_Error_MSE' : metrics.mean_squared_error(y_test, y_pred),
+               'Root_Mean_Squared_Log_Error_RMSLE': np.log(np.sqrt(metrics.mean_squared_error(y_test, y_pred))),
+               'R2_score' : metrics.r2_score(y_test, y_pred)}
+    RGRResults = RGRResults._append(new_row, ignore_index=True)

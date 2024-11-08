@@ -1,0 +1,12 @@
+package newproject;
+public class Practise{
+	int x=20;
+	int s;
+	public Practise(int y) {
+		s=x+y;
+	}
+	public static void main(String args[]) {
+		Practise obj1=new Practise(80);
+		System.out.println("the sum of the two numbers is" +   obj1.s);
+	}
+}

@@ -1,0 +1,114 @@
+package pr1;
+
+
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Caclulator extends WindowAdapter {
+    private Frame frame;
+    private TextField textField;
+
+    private int p, q, result;
+    private char OP;
+
+    public Caclulator() {
+        frame = new Frame();
+        frame.setLayout(new BorderLayout());
+
+        textField = new TextField();
+        textField.setPreferredSize(new Dimension(500, 50));
+        frame.add(textField, BorderLayout.NORTH);
+
+        Panel buttonPanel = new Panel();
+        buttonPanel.setLayout(new GridLayout(4, 4, 5, 5));
+
+        buttonPanel.add(new Button("1"));
+        buttonPanel.add(new Button("2"));
+        buttonPanel.add(new Button("3"));
+        buttonPanel.add(new Button("/"));
+
+        buttonPanel.add(new Button("4"));
+        buttonPanel.add(new Button("5"));
+        buttonPanel.add(new Button("6"));
+        buttonPanel.add(new Button("*"));
+
+        buttonPanel.add(new Button("7"));
+        buttonPanel.add(new Button("8"));
+        buttonPanel.add(new Button("9"));
+        buttonPanel.add(new Button("+"));
+
+        buttonPanel.add(new Button("0"));
+        buttonPanel.add(new Button("-"));
+        buttonPanel.add(new Button("="));
+
+        addActionListeners(buttonPanel);
+
+        frame.add(buttonPanel, BorderLayout.CENTER);
+        frame.setSize(500, 500);
+        frame.setVisible(true);
+
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                frame.dispose();
+            }
+        });
+    }
+
+    private void addActionListeners(Panel buttonPanel) {
+        for (Component component : buttonPanel.getComponents()) {
+            if (component instanceof Button) {
+                Button button = (Button) component;
+                button.addActionListener(new ButtonClickListener());
+            }
+        }
+    }
+
+    private class ButtonClickListener implements ActionListener {
+        public void actionPerformed(ActionEvent event) {
+            Button source = (Button) event.getSource();
+            String buttonText = source.getLabel();
+
+            if (Character.isDigit(buttonText.charAt(0))) {
+                textField.setText(textField.getText() + buttonText);
+            } else if (buttonText.equals("+")) {
+                p = Integer.parseInt(textField.getText());
+                OP = '+';
+                textField.setText("");
+            } else if (buttonText.equals("-")) {
+                p = Integer.parseInt(textField.getText());
+                OP = '-';
+                textField.setText("");
+            } else if (buttonText.equals("*")) {
+                p = Integer.parseInt(textField.getText());
+                OP = '*';
+                textField.setText("");
+            } else if (buttonText.equals("/")) {
+                p = Integer.parseInt(textField.getText());
+                OP = '/';
+                textField.setText("");
+            } else if (buttonText.equals("=")) {
+                q = Integer.parseInt(textField.getText());
+                if (OP == '+') {
+                    result = p + q;
+                } else if (OP == '-') {
+                    result = p - q;
+                } else if (OP == '*') {
+                    result = p * q;
+                } else if (OP == '/') {
+                    try {
+                        result = p / q;
+                    } catch (ArithmeticException e) {
+                        textField.setText("Division by zero not possible");
+                        return;
+                    }
+                }
+                textField.setText(String.valueOf(result));
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new Caclulator();
+    }
+}

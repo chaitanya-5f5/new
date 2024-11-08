@@ -1,0 +1,87 @@
+package pr1;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Caclulator extends Frame implements ActionListener {
+
+    private TextField textField;
+
+    public Caclulator() {
+        setTitle("Simple Calculator");
+        setSize(300, 400);
+        setLayout(new GridLayout(5, 4));
+
+        // Create the text field
+        textField = new TextField();
+        textField.setEditable(false);
+        add(textField);
+
+        // Create the buttons
+        String[] buttonLabels = {
+                "7", "8", "9", "/",
+                "4", "5", "6", "*",
+                "1", "2", "3", "-",
+                "0", ".", "=", "+"
+        };
+
+        for (String label : buttonLabels) {
+            Button button = new Button(label);
+            button.addActionListener(this);
+            add(button);
+        }
+
+        // Set up the frame properties
+        setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String command = e.getActionCommand();
+
+        switch (command) {
+            case "=":
+                try {
+                    double result = evaluateExpression();
+                    textField.setText(Double.toString(result));
+                } catch (ArithmeticException ex) {
+                    textField.setText("Error: Division by zero");
+                } catch (Exception ex) {
+                    textField.setText("Error");
+                }
+                break;
+            default:
+                textField.setText(textField.getText() + command);
+                break;
+        }
+    }
+
+    private double evaluateExpression() {
+        String expression = textField.getText();
+        String[] tokens = expression.split(" ");
+        double operand1 = Double.parseDouble(tokens[0]);
+        String operator = tokens[1];
+        double operand2 = Double.parseDouble(tokens[2]);
+
+        switch (operator) {
+            case "+":
+                return operand1 + operand2;
+            case "-":
+                return operand1 - operand2;
+            case "*":
+                return operand1 * operand2;
+            case "/":
+                if (operand2 == 0) {
+                    throw new ArithmeticException("Division by zero");
+                }
+                return operand1 / operand2;
+            default:
+                throw new IllegalArgumentException("Invalid operator");
+        }
+    }
+
+    public static void main(String[] args) {
+        new Caclulator();
+    }
+}

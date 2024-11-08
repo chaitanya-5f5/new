@@ -1,0 +1,31 @@
+package newproject;
+import java.util.*;
+import java.util.Scanner;
+public class Practise{
+	
+		
+	
+public static void main(String args[]){
+	Scanner sc=new Scanner(System.in);
+	String str1;
+	Practise obj1=new Practise();
+	System.out.println("Enter the string ");
+	str1=sc.nextLine();
+	System.out.println("the reverse of the string is " + obj1.reverse(str1));
+	
+}
+static String reverse(String str) {
+	char[] car=str.toCharArray();
+	int s=0;
+	int e=car.length-1;
+	while(s<e) {
+		char t=car[s];
+		car[s]=car[e];
+		car[e]=car[t];
+		s++;
+		e--;
+	}
+	return new String(car);
+}
+
+}

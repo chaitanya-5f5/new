@@ -1,0 +1,15 @@
+package newproject;
+import java.util.*;
+public class Practise{
+	void Sum(int x,int y) {
+		int s=x+y;
+	}
+	void Substract(int x,int y) {
+		int sub=x-y;
+	}
+	public static void main(String args[]) {
+		Practise obj1=new Practise();
+		System.out.println("the sum of the two numbers is "+ obj1.(5,20));
+		System.out.println("the difference of the two numbers is " + obj(23,3));
+	}
+}

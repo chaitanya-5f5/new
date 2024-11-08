@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="result"></h3>
+    <script>
+        let result="";
+        let fname="gopagoni";
+        let lname="chaitanya";
+        let usename=fname+" "+lname;
+        //result="usename :"+usename+"<br/>";
+        result+="Card Name :"+(fname.charAt(0).toUpperCase())+" "+lname.charAt(0).toUpperCase()+lname.substring(1,lname.length)+"<br/>";
+        result+="User Name :"+(fname.charAt(0).toUpperCase()+fname.substring(1,fname.length))+" "+lname.charAt(0).toUpperCase()+lname.substring(1,lname.length)+"<br/>";
+        document.getElementById('result').innerHTML=result;
+    </script>
+</body>
+</html>

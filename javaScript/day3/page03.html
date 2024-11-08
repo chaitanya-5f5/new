@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="result"></h3>
+    <script>
+        let result= "";
+        let arr1=new Array(10,20,30,40);
+        let arr3=[[0,2],[90,89],[8,9]];
+       /* arr1.shift();
+        result+=arr1.toString()+"<br/><br/>";
+        arr1.shift();
+        result+=arr1.toString()+"<br/><br/>";
+        arr1.shift();
+        result+=arr1.toString()+"<br/><br/>";
+        arr1.unshift();
+        result+=arr1.toString()+"<br/><br/>";*/
+        //arr3.flat();
+        result+=arr3.toString()+"<br/><br/>";
+        result+=arr3.flat()+"<br/><br/>";
+        
+        document.getElementById('result').innerHTML=result;
+    </script>
+    
+</body>
+</html>

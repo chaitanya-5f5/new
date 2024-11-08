@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3 id="result"></h3>
+
+<script>
+    function findelement(){
+let numbers = new Array(4, 9, 16, 25, 29);
+let first = parseInt(document.getElementById('first').value);
+let result="Value Not found!!!";
+for(let i=0;i<numbers.length;i++){
+    if(numbers[i]==first){
+        result="Found at"+(i+1)+"position";
+        break;
+    }
+}
+
+document.getElementById("result").innerHTML=result;
+    }
+</script>
+Enter num1: <input type="text" id="num1"/><br/>
+    <button onClick="findelement()">FIND</button>
+</body>
+</html>

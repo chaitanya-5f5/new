@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Example</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: white;
+            position: sticky; /* Makes the navbar sticky */
+            top: 0; /* Sticks to the top of the page */
+            z-index: 1000; /* Keeps the navbar above other content */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            color: #ddd;
+        }
+
+        /* Background Image Section */
+        .background-image {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-image: url('Van.png'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            height: 400px; /* Adjust height as needed */
+            padding: 0 20px;
+            color: white;
+            position: relative;
+        }
+
+        
+
+        .background-text {
+            font-size: 36px;
+            font-weight: bold;
+            color: rgb(21, 34, 219);
+            text-align: right;
+            padding: 0 10px;
+            position: absolute;
+            right: 0;
+            top: 2%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- Left Logo -->
+            <div class="logo">
+                <img src="download (1).png" alt="Left Logo">
+            </div>
+            
+            <!-- Centered Navigation Links -->
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#dailydeals">Daily Deals</a></li>
+                </ul>
+            </div>
+            
+            <!-- Right Logo -->
+            <div class="logo">
+                <img src="logo.png" alt="Right Logo">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Background Image Section -->
+    <div class="background-image">
+        
+        <!-- Text on Background Image -->
+        <div class="background-text">
+
+           <center> Indian Railways</center>
+        </div>
+    </div>
+</body>
+</html>

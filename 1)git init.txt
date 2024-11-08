@@ -1,0 +1,27 @@
+1)git init
+git clone https://github.com/chaitanya-5f5/devops_my.git
+work flow commands
+4)git status
+in order to add files >cd C:\Users\gchai\OneDrive\Desktop
+2)git add file name
+3)git commit -m filename
+check branch name:git branch 
+git push origin my_branch
+BRANCHING::::::
+creation of the branch :
+5)git branch new_branch
+switching ::::
+6)git checkout new _branch
+in order to delete branch;::::
+7)git checkout main(it switches to main )
+8)git branch -D new_branch
+STASHINGG::::::::::
+9)git stash
+10)git stash apply
+WORKING WITH REMOTES:::::::::::
+git remote add origin <repository-url>
+view repositories in remote
+git remote -v
+remove a repository 
+git remote remove <remote-name>
+git push add

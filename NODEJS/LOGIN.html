@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: lavender;
+        }
+        h1 {
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>
+            <center>LOGIN PAGE</center>
+        </h1>
+        <center>
+            <br>
+            <br>
+            <form name="myform" method="post" action="http://www.doc.com/js/valid.jsp" onsubmit="return validateform();">
+                UserName:
+                <input type="text" size="30" name="name"><br><br>
+                Password:
+                <input type="password" size="30" name="password"><br><br>
+                ReEnter-Password:
+                <input type="password" size="30" name="repassword"><br><br>
+                <input type="submit" value="Submit" class="btn btn-success">
+            </form>
+        </center>
+    </div>
+
+</body>
+</html>

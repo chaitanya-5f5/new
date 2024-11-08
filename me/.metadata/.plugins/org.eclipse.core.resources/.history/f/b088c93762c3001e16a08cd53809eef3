@@ -1,0 +1,104 @@
+package pr1;
+
+
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class Caclulator extends WindowAdapter {
+    public Frame frame;
+    public TextField textField;
+
+    private int p, q, result;
+    private char OP;
+
+    public Caclulator() {
+        frame = new Frame();
+        frame.setLayout(new BorderLayout());
+
+        textField = new TextField();
+        frame.add(textField, BorderLayout.NORTH);
+
+        addButton("1");
+        addButton("2");
+        addButton("3");
+        addButton("/");
+
+        addButton("4");
+        addButton("5");
+        addButton("6");
+        addButton("*");
+
+        addButton("7");
+        addButton("8");
+        addButton("9");
+        addButton("+");
+
+        addButton("0");
+        addButton("-");
+        addButton("=");
+
+        frame.setSize(500, 500);
+        frame.setVisible(true);
+
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                frame.dispose();
+            }
+        });
+    }
+
+    private void addButton(String label) {
+        Button button = new Button(label);
+        button.addActionListener(new ButtonClickListener());
+        frame.add(button, BorderLayout.CENTER);
+    }
+
+    public class ButtonClickListener implements ActionListener {
+        public void actionPerformed(ActionEvent event) {
+            Button source = (Button) event.getSource();
+            String buttonText = source.getLabel();
+
+            if (Character.isDigit(buttonText.charAt(0))) {
+                textField.setText(textField.getText() + buttonText);
+            } else if (buttonText.equals("+")) {
+                p = Integer.parseInt(textField.getText());
+                OP = '+';
+                textField.setText("");
+            } else if (buttonText.equals("-")) {
+                p = Integer.parseInt(textField.getText());
+                OP = '-';
+                textField.setText("");
+            } else if (buttonText.equals("*")) {
+                p = Integer.parseInt(textField.getText());
+                OP = '*';
+                textField.setText("");
+            } else if (buttonText.equals("/")) {
+                p = Integer.parseInt(textField.getText());
+                OP = '/';
+                textField.setText("");
+            } else if (buttonText.equals("=")) {
+                q = Integer.parseInt(textField.getText());
+                if (OP == '+') {
+                    result = p + q;
+                } else if (OP == '-') {
+                    result = p - q;
+                } else if (OP == '*') {
+                    result = p * q;
+                } else if (OP == '/') {
+                    try {
+                        result = p / q;
+                    } catch (ArithmeticException e) {
+                        textField.setText("Division by zero not possible");
+                        return;
+                    }
+                }
+                textField.setText(String.valueOf(result));
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new Caclulator();
+    }
+}

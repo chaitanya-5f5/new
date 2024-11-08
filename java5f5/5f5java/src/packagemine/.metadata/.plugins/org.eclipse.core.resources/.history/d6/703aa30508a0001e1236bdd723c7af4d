@@ -1,0 +1,19 @@
+package newproject;
+import java.util.*;
+import java.util.Scanner;
+public class Practise{
+	
+		
+	
+public static void main(String args[]){
+	Scanner sc=new Scanner(System.in);
+	String str1,str2;
+	//Practise obj1=new Practise();
+	System.out.println("Enter the string ");
+	str1=sc.nextLine();
+	System.out.println("Enter teh second string:");
+	str2=sc.nextLine();
+	System.out.println("the reverse of the string is " + str1+str2 );
+	
+}
+}

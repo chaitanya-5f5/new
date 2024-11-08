@@ -1,0 +1,17 @@
+package newproject;
+import java.util.*;
+import java.util.Scanner;
+public class Practise{	
+public static void main(String args[]){
+	Scanner sc=new Scanner(System.in);
+	int num,age;
+	System.out.println("Enter teh number:");
+	num=sc.nextInt();
+	if(num<18) {
+		throw new ArithematicExeception("there are not eligible");
+	}
+	else {
+		System.out.println("you are ");
+	}
+}
+}

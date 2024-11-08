@@ -1,0 +1,55 @@
+package pr1;
+
+import java.util.Scanner;
+
+abstract class EvenOdd {
+    public int x, y;
+
+    public abstract void paintArea();
+}
+
+class Rectangle extends EvenOdd {
+    public void paintArea() {
+        System.out.println("The area of rectangle: " + x * y);
+    }
+}
+
+class Triangle extends EvenOdd {
+    public void paintArea() {
+        float area = (x * y) / 2.0f;
+        System.out.println("The area of triangle: " + area);
+    }
+}
+
+class Circle extends EvenOdd {
+    public void paintArea() {
+        float area = (22 * x * x) / 7.0f;
+        System.out.println("The area of circle: " + area);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x1, y1;
+
+        System.out.println("Enter the dimensions for x and y:");
+        x1 = sc.nextInt();
+        y1 = sc.nextInt();
+
+        Rectangle r = new Rectangle();
+        r.x = x1;
+        r.y = y1;
+        r.paintArea();
+
+        Triangle t = new Triangle();
+        t.x = x1;
+        t.y = y1;
+        t.paintArea();
+
+        Circle c = new Circle();
+        c.x = x1;
+        c.y = y1; // Circle has two dimensions, so set y as well
+        c.paintArea();
+    }
+}

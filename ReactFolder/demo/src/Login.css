@@ -1,0 +1,9 @@
+/* login.css */
+/* Setting only the background color for the container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #9090f8; /* Choose any color you prefer */
+}

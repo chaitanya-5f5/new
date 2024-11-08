@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="result"></h3>
+    <script>
+        let result=" ";
+        let arr=new Array(10,20,30);
+       
+        result="Arraylength :"+
+        arr.length+"<br/>";
+        result+=arr.toString()+"<br/><br/>";
+        arr.push(200);
+        result+="ArrayLength: "+arr.length+"<br/>";
+        result+=arr.toString()+"<br/><br/>";
+        arr.pop();
+        result+="ArrayLength "+arr.length+"<br/>";
+        result+=arr.toString()+"<br/><br/>";
+        delete arr[1];
+        result+="ArrayLength "+arr.length+"<br/>";
+        result+=arr.toString()+"<br/><br/>";
+        arr.splice(1,1);
+        result+="ArrayLength "+arr.length+"<br/>";
+        result+=arr.toString()+"<br/><br/>";
+        let arr2=new Array(50,60,70,80);
+        result+=(arr.concat(arr2)).toString();
+        document.getElementById('result').innerHTML=result;
+    </script>
+</body>
+</html>

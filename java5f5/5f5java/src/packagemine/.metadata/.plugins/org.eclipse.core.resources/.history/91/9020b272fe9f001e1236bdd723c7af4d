@@ -1,0 +1,19 @@
+package newproject;
+
+public class Practise {
+    int x = 20;
+    int s;
+
+    // Constructor with a parameter
+    public Practise(int y) {
+        s = x + y;
+    }
+
+    public static void main(String args[]) {
+        // You need to provide a value for the constructor parameter
+        Practise obj1 = new Practise(30);
+
+        // Access the property that holds the sum
+        System.out.println("The sum of the two numbers is " + obj1.s);
+    }
+}

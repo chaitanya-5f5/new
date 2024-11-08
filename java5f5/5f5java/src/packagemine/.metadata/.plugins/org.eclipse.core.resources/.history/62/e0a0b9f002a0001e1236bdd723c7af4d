@@ -1,0 +1,31 @@
+package newproject;
+import java.util.*;
+import java.util.Scanner;
+
+public class Practise {
+    public static void main(String args[]) {
+    	Scanner sc=new Scanner(System.in);
+    	String str1;
+    	System.out.println("Enter the text to be entered:");
+    	str1=sc.nextLine();
+    	if(ispalindrome(str1)) {
+    		System.out.println("the string is a palindrome");
+    	}
+    	else {
+    		System.out.println("the string is not a palindrome");
+    	}	
+    	}
+    public boolean ispalindrome(String s) {
+    	s=s.replace("\\s", " ").toLowerCase();
+    	int l=s.length();
+    	for(int i=0;i<l/2;i++) {
+    		if(s.charAt(i)!=s.charAt(l-i-1)) {
+    			return false;
+    		}
+    		else {
+    			return true;
+    		}
+    	}
+    }
+    	
+    }

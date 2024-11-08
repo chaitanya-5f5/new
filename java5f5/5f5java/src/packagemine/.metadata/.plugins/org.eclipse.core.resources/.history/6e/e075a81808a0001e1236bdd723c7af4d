@@ -1,0 +1,17 @@
+package newproject;
+import java.util.*;
+import java.util.Scanner;
+public class Practise{	
+public static void main(String args[]){
+	int v1,v2;
+	try {
+		v1=0;
+		v2=25/v1;
+		System.out.println("the value of the v2");
+	}
+	catch (ArithmeticException e) {   	         //handler for ArithmeticException 
+         System.out.println("ArithmeticException ");
+      } 
+
+}
+}

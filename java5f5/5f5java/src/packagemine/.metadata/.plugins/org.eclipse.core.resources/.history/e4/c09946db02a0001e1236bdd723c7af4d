@@ -1,0 +1,36 @@
+package newproject;
+import java.util.*;
+import java.util.Scanner;
+
+public class Practise {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read input from the user
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+
+        // Check if the input string is a palindrome
+        if (isPalindrome(input)) {
+            System.out.println("The string is a palindrome.");
+        } else {
+            System.out.println("The string is not a palindrome.");
+        }
+
+        scanner.close();
+    }
+
+    // Function to check if a string is a palindrome
+    static boolean isPalindrome(String str) {
+        // Remove spaces and convert to lowercase for case-insensitive comparison
+        str = str.replaceAll("\\s", "").toLowerCase();
+
+        int length = str.length();
+        for (int i = 0; i < length / 2; i++) {
+            if (str.charAt(i) != str.charAt(length - i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+}

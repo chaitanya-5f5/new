@@ -1,0 +1,104 @@
+# To build the 'Logistic Regression' model with random sampling
+
+from sklearn.linear_model import LogisticRegression
+
+# Create an object for model
+
+ModelLR = LogisticRegression()
+#ModelLR = LogisticRegression(penalty='l2', dual=False, tol=0.0001, C=1.0, fit_intercept=True, intercept_scaling=1, 
+#                             class_weight=None, random_state=None, solver='lbfgs', max_iter=100, multi_class='auto', 
+#                             verbose=0, warm_start=False, n_jobs=None, l1_ratio=None)
+
+# Train the model train data 
+
+ModelLR.fit(x_train, y_train)
+
+# Predict the model with test data
+
+y_pred = ModelLR.predict(x_test)
+y_pred_prob = ModelLR.predict_proba(x_test)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+# 'Confusion matrix' and 'classification report' in sklearn
+
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
+
+# Actual values
+
+actual = y_test
+
+# Predicted values
+
+predicted = y_pred
+
+# Confusion matrix
+
+matrix = confusion_matrix(actual,predicted, labels=[1,0], sample_weight=None, normalize=None)
+print('Confusion matrix : \n', matrix)
+
+# Outcome values order in sklearn
+
+tp, fn, fp, tn = confusion_matrix(actual,predicted,labels=[1,0]).reshape(-1)
+print('Outcome values : \n', tp, fn, fp, tn)
+
+# Classification report for precision, recall f1-score and accuracy
+
+C_Report = classification_report(actual,predicted,labels=[1,0])
+
+print('Classification report : \n', C_Report)
+
+# Calculating the metrics
+
+sensitivity = round(tp/(tp+fn), 3);
+specificity = round(tn/(tn+fp), 3);
+accuracy = round((tp+tn)/(tp+fp+tn+fn), 3);
+balanced_accuracy = round((sensitivity+specificity)/2, 3);
+    
+precision = round(tp/(tp+fp), 3);
+f1Score = round((2*tp/(2*tp + fp + fn)), 3);
+
+# Matthews Correlation Coefficient (MCC). Range of values of MCC lie between -1 to +1. 
+# A model with a score of +1 is a perfect model and -1 is a poor model
+
+from math import sqrt
+
+mx = (tp+fp) * (tp+fn) * (tn+fp) * (tn+fn)
+MCC = round(((tp * tn) - (fp * fn)) / sqrt(mx), 3)
+
+print('Accuracy :', round(accuracy*100, 2),'%')
+print('Precision :', round(precision*100, 2),'%')
+print('Recall :', round(sensitivity*100,2), '%')
+print('F1 Score :', f1Score)
+print('Specificity or True Negative Rate :', round(specificity*100,2), '%')
+print('Balanced Accuracy :', round(balanced_accuracy*100, 2),'%')
+print('MCC :', MCC)
+
+# Area under ROC curve 
+
+from sklearn.metrics import roc_curve, roc_auc_score
+
+print('roc_auc_score:', round(roc_auc_score(actual, predicted), 3))
+
+# ROC Curve
+
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import roc_curve
+model_roc_auc = roc_auc_score(actual, predicted)
+fpr, tpr, thresholds = roc_curve(actual, ModelLR.predict_proba(x_test)[:,1])
+plt.figure()
+#----------------------------------------------------
+plt.plot(fpr, tpr, label= 'Classification Model' % model_roc_auc)
+plt.plot([0, 1], [0, 1],'r--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver operating characteristic')
+plt.legend(loc="lower right")
+plt.show() 
+print('-----------------------------------------------------------------------------------------------------')
